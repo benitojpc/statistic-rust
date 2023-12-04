@@ -1,5 +1,4 @@
-# statistic-rust
-Statistic with Rust
+# Statistic with Rust
 
 Essential Rust Libraries for Statistics:
 
@@ -22,3 +21,30 @@ Essential Rust Libraries for Statistics:
   * Customizalbe plot aesthetics, such as colors, markers, and axis labels.
   * Interactive plot features, including zooming, panning, and hover tooltips.
   * Ability to save plots as: HTML, SVG, or PNG files.
+
+
+To use these libraries in your Rust project, we'll need to add them as dependencies in our project's *Cargo.toml* file. Following is a step-by-step walkthrough on how to set up a new Rust project and install these libraries.
+
+## Create a New Rust Project
+
+Open a terminal or command prompt, create our project on the directory where we want to create, and run the following commands:
+
+* *cargo new <my_statistic_project_name>*, this will create a new Rust project with followgin structure:
+        my_statistic_project_name /
+              |-> Cargo.toml
+              |-> src / 
+                  |--> main.rs
+* In *Cargo.toml* file add library dependencies. We will see a section called *[dependencies]*. Under this section, add the following lines to include library dependencies:
+        [dependencies]
+        ndarray   = "<id_version>"
+        statrs    = "<id_version>"
+        statis    = "<id_version>"
+        plotly    = "<id_version>"
+  *<id_version>* represent the version of each library. We can check for the latest versions of these libraries on their respective GitHub repositories or by searching for them on *crates.io*.
+* *Build and run the project*. Under root directory of the project (*<my_statistic_project>*) run the following command: **cargo build**. This command will download and compile the specific dependencies for our project.
+* *Import libraries in Rust code*. Open the *src/main.rs* file in our project directory and **import** the libraries by adding the following lines at the beginning of the file:
+  
+      extern crate ndarray;
+      extern crate statrs;
+      extern crate statis;
+      extern crate plotly;
